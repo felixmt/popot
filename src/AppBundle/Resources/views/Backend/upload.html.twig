@@ -1,0 +1,37 @@
+{# src/AppBundle/Resources/views/Backend/gallery.html.twig #}
+
+{% extends "AppBundle::base_backend.html.twig" %}
+
+{% block body %}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<section class="main-content" id="gallery">
+    <section class="wrapper">
+            
+        {#<?php include_once __DIR__.'/../include/breadcrumb.php'; ?>#}
+        
+        <div class="row block title">
+            <div class="col-md-12">
+                <section class="panel title">
+                    <div class="panel-body">
+                        Upload photos
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <section class="panel">
+                    <div class="panel-body">
+                        <form action="" method="post" {{ form_enctype(form) }}>
+        {{ form_widget(form) }}
+        <input type="submit" />
+    </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+</section>
+{% endblock %}

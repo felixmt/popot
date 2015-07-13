@@ -1,0 +1,264 @@
+{# src/AppBundle/Resources/views/Frontend/index.html.twig #}
+
+{% extends "AppBundle::base_frontend.html.twig" %}
+
+{% block body  %}
+<section id="home" class="content-section video-section bloc-color2">
+    <div class="pattern-overlay">
+        <a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=ZQaBcNI_AoM',containment:'.video-section', quality:'large', autoPlay:true, mute:true, opacity:1}">bg</a>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Constant Popot</h1>  
+                    <h3>C'est qui le deus ?</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- section 1 -->
+<section id="section1" class="bloc bloc-color1">
+    <div class="container">
+        <div class="bloc-heading text-center" style="font-size:20px">
+            <!-- Heading -->
+            <p>« La France est atteinte d'une surproduction de gens à diplômes, polytechniciens, économistes, philosophes et autres rêveurs qui ont perdu tout contact avec le monde réel. » - Roland Barthes.</p>
+        </div>
+        <div class="row">
+            <!-- item -->
+            <div class="col-md-6 text-center">
+                <i class="fa fa-graduation-cap fa-5x"></i>
+                <h3>FORMATION</h3>
+                <p>Faculté de Paris<br>
+                Juriste<br>
+                Master en droit de la propriété intellectuelle.<br>
+                2009 – 2017</p>
+                <p>Lycée Jeannot<br>
+                Bac Scientifique<br>
+                2007 – 2009</p>
+            </div>
+            <!-- end: -->
+
+            <!-- item -->
+            <div class="col-md-6 text-center">
+                <i class="fa fa-eye fa-5x"></i>
+                <h3><span style="text-transform:uppercase;">EXPéRIENCE</span></h3>
+                <p>Hôpital de Paris<br>
+                Brancardiste<br>
+                Juin 2015 - Septembre 2015</p>
+                <p>Vendanges<br>
+                Porteur<br>
+                2014
+                </p>
+            </div>
+            <!-- end: -->
+        </div>
+    </div>
+</section>
+<div class="ignite-cta text-center bloc-color2" id="social-bloc">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                contact@constantpopot.com
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <ul>
+                    <li>
+                        <a class="social-button" href="#"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a class="social-button" href="#"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                    <li>
+                        <a class="social-button" href="#"><i class="fa fa-vimeo-square"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>   
+<!-- section 2 --->
+<section id="section2" class="bloc bloc-color1">
+    <div class="container">
+        <div class="bloc-heading text-center">
+            <!-- Heading -->
+            <p style="font-size:40px;font-weight:bold;">Qui suis-je ?</p>
+        </div>
+        <div class="row">
+            <!-- item -->
+            <div class="col-md-12 text-center">
+                <img src="./img/profile.jpg" class="img-circle" alt="Profile picture" width="500"> 
+            </div>
+            <!-- end: -->
+        </div>
+    </div>
+</section>
+<!-- section projects --->
+<section id="projects" class="bloc bloc-color2">
+    <div class="container">
+        <div class="row bloc-heading text-center">
+            <div class="col-md-12">
+                <!-- Heading -->
+                <p>Mes projets</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <span class="pull-right">
+                <button id="projects-1" class="projects-btn" onClick="displayProjects(this)">Perso</button></span>
+            </div>
+            <div class="col-md-6">
+                <button class="projects-btn" href="#">Pro</button>
+            </div>
+        </div>
+        
+        <div id="projects-1-list" class="row projects-list">
+            <!-- item -->
+            <div class="col-xs-1 col-md-6 col-lg-4 text-center">
+                <a class="projects-item">
+                    <img src="./img/IMGP2358.jpg" class="img-responsive" alt="Profile picture"/>
+                    <div class="projects-item-caption">
+                        <div class="projects-item-caption-content">
+                            <div class="projects-item-name" style="font-size:22px"> Project Name </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- end: --><!-- item -->
+            <div class="col-xs-1 col-md-6 col-lg-4 text-center">
+                <img src="./img/IMGP2433.jpg" class="img-responsive" alt="Profile picture"/>
+                <div class="projects-item-caption"></div>
+            </div>
+            <!-- end: --><!-- item -->
+            <div class="col-xs-1 col-md-6 col-lg-4 text-center">
+                <img src="./img/IMGP2484.jpg" class="img-responsive" alt="Profile picture"/>
+                <div class="projects-item-caption"></div>
+            </div>
+            <!-- end: --><!-- item -->
+            <div class="col-xs-1 col-md-6 col-lg-4 text-center">
+                <img src="./img/IMGP2487.jpg" class="img-responsive" alt="Profile picture"/>
+                <div class="projects-item-caption"></div>
+            </div>
+            <!-- end: --><!-- item -->
+            <div class="col-xs-1 col-md-6 col-lg-4 text-center">
+                <img src="./img/IMGP2501.jpg" class="img-responsive" alt="Profile picture"/>
+                <div class="projects-item-caption"></div>
+            </div>
+            <!-- end: --><!-- item -->
+            <div class="col-xs-1 col-md-6 col-lg-4 text-center">
+                <img src="./img/IMGP2508.jpg" class="img-responsive" alt="Profile picture"/>
+                <div class="projects-item-caption"></div>
+            </div>
+            <!-- end: -->
+        </div>
+    </div>
+</section>
+
+<!-- contact -->
+<!-- section 1 -->
+<section id="section1" class="bloc bloc-color1">
+    <div class="container">
+        <div class="row bloc-heading text-center">
+            <div class="col-md-12">
+                <!-- Heading -->
+                <p>Me contacter</p>
+            </div>
+        </div>
+        <div class="row" style="padding-top:50px">
+            <div class="col-lg-offset-2 col-md-4 text-center">
+                <div><i class="fa fa-phone fa-3x"></i></div>
+                <div style="margin-top:30px;">+33 (0) 6 45 36 74 64</div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div><i class="fa fa-envelope-o fa-3x"></i></div>
+                <div style="margin-top:30px;">contact@constantpopot.com</div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block javascripts %}
+<script>
+/* PROJECTS *************************/
+function displayProjects(proj) {
+    var element = "#" + proj.id + "-list"
+    if ($(element).css('display') == "none") {
+        $(element).slideDown();
+        var speed = 750; // Durée de l'animation (en ms)
+        setTimeout(function(){
+            $('html, body').animate( { scrollTop: $(element).offset().top }, speed );
+        }, 400); 
+    } else {
+        $(element).slideUp();
+    }
+}
+/* VIDEO ************************/
+$(document).ready(function () {
+
+    $(".player").mb_YTPlayer();
+
+});
+
+/* smooth scroll ***************************/
+var lastId,
+    topMenu = $("#menu-list"),
+    topMenuHeight = topMenu.outerHeight()-30,
+    // All list items
+    menuItems = topMenu.find("a"),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function() {
+        var item = $($(this).attr("href"));
+        if (item.length) {
+            return item; 
+        }
+    });
+//smooth scroll
+/*menuItems.click(function(e){
+  var href = $(this).attr("href"),
+      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+  $('html, body').stop().animate({ 
+      scrollTop: offsetTop
+  }, 600);
+  e.preventDefault();
+});*/
+
+//menu smooth scroll 
+$('a').click(function() {
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+    }, 600);
+    return false;
+});
+
+// change menu items color
+$(window).scroll(function() {
+   // Get container scroll position
+   var fromTop = $(this).scrollTop() + topMenuHeight;
+   
+   // Get id of current scroll item
+   var cur = scrollItems.map(function(){
+     if ($(this).offset().top < fromTop)
+       return this;
+   });
+   // Get the id of the current element
+   cur = cur[cur.length-1];
+   var id = cur && cur.length ? cur[0].id : "";
+   
+   if (lastId !== id) {
+        lastId = id;
+        // Set/remove active class
+        menuItems
+            .parent().removeClass("active")
+            .end().filter("[href=#" + id + "]").parent().addClass("active");
+        if ($('#' + id).hasClass('bloc-color1') && id != 'home') {
+            $("#menu-list > li:not('.active') > a").css('color', '#000');
+        } else {
+            $("#menu-list > li:not('.active') > a").css('color', '#fff');
+        }
+        $("#menu-list > li.active > a").css('color', '#d6d6d6');
+   }                   
+});
+</script>
+{% endblock %}

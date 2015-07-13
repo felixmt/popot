@@ -1,0 +1,186 @@
+body {
+    margin:0;
+    padding:0;
+    font-family: Arial,"Arial Unicode MS",Helvetica,sans-serif;
+    font-size:20px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color:#000;
+}
+
+.navbar-default .navbar-brand {
+    color: #000;
+}
+
+#menu-list > li > a {
+    color:#fff;
+    text-transform: uppercase;
+    font-family: "Open Sans","Helvetica Neue",Arial,sans-serif;
+    font-size:13px;
+    font-weight:bold;
+    
+}
+
+#menu-list > li.active > a {
+    color:#d6d6d6;
+    background:transparent;
+    box-shadow:none;
+}
+
+/* BLOCS ************************************************************/
+.bloc {
+    padding: 60px 0;
+}
+
+.bloc-heading {
+    display: block;
+    padding: 0 10px;
+    font-size:40px;font-weight:bold;
+}
+
+.bloc-color2 {
+    background-color:#000;
+    color:#fff;
+}
+
+.bloc-color1 {
+    background-color:#fff;
+    color:#000;
+}
+
+/* IMG BACKGROUND **************************************************/
+.ignite-cta {
+    background: rgba(0, 0, 0, 0) url("../../img/background-offres.jpg") no-repeat fixed center center / cover ;
+    padding: 70px 0;
+    color:white;
+    font-size:40px;
+}
+
+/* SOCIAL BLOC ********************************************************/
+#social-bloc ul {
+    list-style:none;
+}
+
+#social-bloc ul li {
+    display:inline-block;
+    padding:40px 10px 0 10px;
+}
+
+.social-button {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 50%;
+    color: #000;
+    display:inline-block;
+    line-height:40px;
+    text-align:center;
+    font-size:17px;
+    width:40px;
+    height:40px;
+    transition: all 0.4s linear 0s;
+    -webkit-transition: all 0.4s linear 0s;
+}
+
+.social-button:hover {
+    background: #000 none repeat scroll 0 0;
+    color:#fff;
+}
+
+/* PROJECTS BLOC ***************************************************/
+#projects > .container {
+    width:100%;
+}
+
+#projects > .container > .row > div {
+    margin:0;
+    padding:0;
+}
+
+#projects {
+    padding-bottom:0;
+}
+
+.projects-list {
+    display:none;
+}
+.projects-item {
+    position:relative;
+    display:block;
+    margin: 0 auto;
+}
+
+.projects-item-caption {
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index:2;
+    top:0%;
+    display:block;
+    text-align:center;
+    /*background-color:#fff;*/
+    background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
+    opacity:0;
+    transition: all 0.35s ease 0s;
+    -webkit-transition: all 0.35s ease 0s;
+    color:white;
+}
+
+.projects-item-caption:hover {
+    opacity:1;
+    cursor:pointer;
+}
+
+.projects-item-caption-content {
+    top:50%;
+    width:100%;
+    position:absolute;
+    transform: translateY(-50%);
+}
+
+.projects-btn {
+    border: 1px solid #fff;
+    color: #fff;
+    display: inline-block;
+    font-size: xx-large;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 20px 40px;
+    text-transform: uppercase;
+    margin:50px 20px 70px 20px;
+    background:transparent;
+    transition: all 0.35s linear 0s;
+    -webkit-transition: all 0.35s linear 0s;
+}
+
+.projects-btn:hover {
+    color: #D9002F;
+    border-color: #D9002F;
+}
+/* VIDEO ***********************************************************/
+.video-section .pattern-overlay {
+    /*background-color: rgba(150, 150, 150, 0.59);*/
+    padding: 110px 0 32px;
+    min-height: 496px; 
+    /* Incase of overlay problems just increase the min-height*/
+}
+.video-section h1, .video-section h3{
+    text-align:center;
+    color:#fff;
+}
+.video-section h1{
+    font-size:110px;
+    font-family: 'Buenard', serif;
+    font-weight:bold;
+    text-transform: uppercase;
+    margin: 40px auto 0px;
+    text-shadow: 1px 1px 1px #000;
+    -webkit-text-shadow: 1px 1px 1px #000;
+    -moz-text-shadow: 1px 1px 1px #000;
+}
+.video-section h3{
+    font-size: 25px;
+    font-weight:lighter;
+    margin: 0px auto 15px;
+}
+.video-section .buttonBar{display:none;}
+.player {font-size: 1px;}

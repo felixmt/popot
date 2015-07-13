@@ -1,0 +1,11 @@
+AppBundle\Entity\Gallery:
+    properties:
+        name:
+            - NotBlank: ~
+            - Length:
+                max: 15
+        route:
+            - NotBlank: ~
+            - Regex: "/[A-Za-z]/"
+        folder:
+            - NotBlank: ~

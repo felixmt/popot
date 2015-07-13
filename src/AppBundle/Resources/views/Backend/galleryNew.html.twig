@@ -1,0 +1,105 @@
+    {# src/AppBundle/Resources/views/Backend/galleryNew.html.twig #}
+
+{% extends "AppBundle::base_backend.html.twig" %}
+
+    {% block body %}
+    <section class="main-content" id="home">
+			<section class="wrapper">
+				
+				{#<?php include_once __DIR__.'/../include/breadcrumb.php'; ?>#}
+				
+				<div class="row block title">
+					<div class="col-md-12">
+						<section class="panel title">
+							<div class="panel-body">
+								Ajouter une galerie
+                               {% if page_id is defined %}
+                                    <div class="pull-right">
+                                        <a onclick="return confirm('Cette action est irréversible, êtes-vous sûr de vouloir supprimer cette galerie ?');" href="{{ path('backend_gallery_delete', { 'id': gallery.id })  }}" class="btn btn-default btn-title">Supprimer</a>
+                                    </div>
+                               {% endif %}
+							</div>
+						</section>
+					</div>
+				</div>
+                
+                {% for flashMessage in app.session.flashbag.get('notice') %}
+            <div class="row block">
+                <div class="col-md-12">
+                    <section class="panel">
+                        <div class="panel-body notification-success">
+                                <div class="flash-notice" style="float:left;">
+                                    {{ flashMessage }}
+                                </div>
+                            <span class="tools pull-right">
+                                <a href="#" class="fa fa-times" onClick="hideBlock(this)"></a>
+                            </span>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            {% endfor %}
+            {% for flashMessage in app.session.flashbag.get('warning') %}
+            <div class="row block">
+                <div class="col-md-12">
+                    <section class="panel">
+                        <div class="panel-body notification-error">
+                                <div class="flash-notice" style="float:left;">
+                                    {{ flashMessage }}
+                                </div>
+                            <span class="tools pull-right">
+                                <a href="#" class="fa fa-times" onClick="hideBlock(this)"></a>
+                            </span>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            {% endfor %}
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <section class="panel">
+                            <div class="panel-body">
+                                {{ form_start(form, { 'attr': { 'class' : 'form-horizontal', 'data-toggle': 'validator' } }) }}
+                                    {{ form_errors(form) }}
+                                    
+                                    <div class="form-group">
+                                        {{ form_label(form.name, null, { 'label_attr' : { 'class': 'col-md-2 control-label' } }) }}
+                                        <div class="col-md-10 col-lg-5">
+                                            {{ form_widget(form.name) }}
+                                            {{ form_errors(form.name) }}
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form_label(form.route, null, { 'label_attr' : { 'class': 'col-md-2 control-label' } }) }}
+                                        <div class="col-md-10 col-lg-5">
+                                            {{ form_widget(form.route) }}
+                                            <span class="help-block">Uniquement des lettres</span>
+                                            {{ form_errors(form.route) }}
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form_label(form.folder, null, { 'label_attr' : { 'class': 'col-md-2 control-label' } }) }}
+                                        <div class="col-md-10 col-lg-5">
+                                            {{ form_widget(form.folder) }}
+                                            {{ form_errors(form.folder) }}
+                                        </div>
+                                    </div>
+                                    {{ form_row(form.isHomeGallery) }}
+                                    <div class="form-group">
+                                        <div class="col-md-12 col-lg-7" style="margin-right:0px">
+                                            <div class="pull-right">
+                                                {{ form_widget(form.Enregistrer) }}
+                                                {{ form_widget(form.Valider) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                {{ form_end(form) }}
+                            </div>
+                        </section>
+                    </div>
+                </div>
+			</section>
+		</section>
+	</section>
+    {% endblock %}

@@ -1,0 +1,42 @@
+backend_homepage:
+    path:     /admin
+    defaults: { _controller: AppBundle:Backend:index, templateName: index }
+    
+backend_upload:
+    path:     /admin/uploads
+    defaults: { _controller: AppBundle:Backend:upload, templateName: upload }
+    
+backend_gallery_list:
+    path:     /admin/galleries
+    defaults: { _controller: AppBundle:Backend:galleryList, templateName: galleryList }
+    
+backend_gallery_new:
+    path:     /admin/galleries/new
+    defaults: { _controller: AppBundle:Backend:galleryNew, templateName: galleryNew }
+
+backend_gallery_update:
+    path:     /admin/galleries/update/{id}
+    defaults: { _controller: AppBundle:Backend:galleryNew, templateName: galleryNew }
+    
+backend_gallery_delete:
+    path:     /admin/galleries/delete/{id}
+    defaults: { _controller: AppBundle:Backend:galleryDelete, templateName: galleryList }
+    
+backend_gallery_deleteAjax:
+    pattern: /admin/galleries/deleteAjax
+    defaults: { _controller: AppBundle:Backend:galleryDeleteAjax }
+    requirements:
+        _method: POST
+
+frontend_homepage:
+    path:     /
+    defaults: { _controller: AppBundle:Frontend:index, templateName: index }
+    
+frontend_gallery:
+    path:     /galleries/{route}
+    defaults: { _controller: AppBundle:Frontend:index, templateName:index }
+    
+frontend_contact:
+    path:     /contact
+    defaults: { _controller: AppBundle:Frontend:contact, templateName:index }
+    

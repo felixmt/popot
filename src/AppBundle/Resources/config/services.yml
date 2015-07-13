@@ -1,0 +1,5 @@
+services:
+        backend.form.type.gallery:
+        class: AppBundle\Form\Type\GalleryType
+        tags:
+            - { name: form.type, alias: gallery }
